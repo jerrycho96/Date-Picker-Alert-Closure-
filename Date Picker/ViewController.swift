@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         if dateLabel.text == normalLabel.text {
             view.backgroundColor = UIColor.red
         }
+        
     }
 
 
