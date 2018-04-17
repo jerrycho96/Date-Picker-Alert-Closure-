@@ -35,6 +35,20 @@ class ViewController: UIViewController {
         
         if dateLabel.text == normalLabel.text {
             view.backgroundColor = UIColor.red
+            let myAlert = UIAlertController(title: "알림", message: "설정된 시간입니다.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "확인", style: .default) { (action: UIAlertAction) -> Void in
+                self.view.backgroundColor = UIColor.blue
+            }
+            let cancelAction = UIAlertAction(title: "취소", style: .cancel) { (action: UIAlertAction) -> Void in
+                self.view.backgroundColor = UIColor.green
+            }
+            
+            myAlert.addAction(okAction)
+            myAlert.addAction(cancelAction)
+            
+            
+            present(myAlert, animated: true, completion: nil)
         }
         
     }
